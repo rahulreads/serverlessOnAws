@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  energy-lambda:
+    build:
+      context: .
+      dockerfile: ./compose/prod/Dockerfile
+    image: aws-ecr-location/service:latest
+    container_name: api-lambda
+    ports:
+      - 9000:8080
+
+  energy-dev:
+    build:
+      context: .
+      dockerfile: ./compose/dev/Dockerfile
+    image: api-dev:latest
+    container_name: energy-dev
+    volumes:
+      - ./src:/usr/src/app/src
+    ports:
+      - 8000:8000

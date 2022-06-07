@@ -1,0 +1,9 @@
+fastapi
+json5==0.9.6
+jsonschema==4.4.0
+pandas==1.3.5
+pydantic==1.8.2
+requests==2.27.1
+uvicorn==0.17.4
+starlette==0.16.0
+Mangum
