@@ -11,4 +11,4 @@ RUN pip install -r /code/dev.txt
 ADD src /code/src
 RUN echo $(ls -1 /code)
 # 
-CMD ["uvicorn", "src.energyAPI:app", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["uvicorn", "src.ApiFile:app", "--host", "0.0.0.0", "--port", "5000"]
